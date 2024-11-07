@@ -3,7 +3,7 @@
 
 .sidebar {
     position: absolute;
-
+    bottom:0;
     left: 0;
     width: 10%;  /* Ancho del sidebar */
     height: 100%; /* Altura completa */
