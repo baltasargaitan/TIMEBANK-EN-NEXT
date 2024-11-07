@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import styles from '../styles/header.module.css';
+import styles from '../styles/Header.module.css';
 
 const RelojLogo = () => {
   const [date, setDate] = useState(null);  // Estado inicialmente nulo para evitar el desajuste
