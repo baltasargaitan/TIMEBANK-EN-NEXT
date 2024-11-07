@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.landpageContainer {
+    max-width: 500px;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    background-color: brown;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat", sans-serif; 
+}
+
+.landpageContainer h1 {
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", sans-serif; 
+}
+
+.landpageContainer p {
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    font-family: "Montserrat", sans-serif; 
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255); 
+    color: #000000; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-family: "Montserrat", sans-serif; 
+}
+
+.button:hover {
+    background-color: rgb(96, 50, 50);
+}
+
+.button:active {
+    background-color: white; 
+}
+
+.button, .p, .h1 {
+    font-family: "Montserrat", sans-serif !important; 
+}

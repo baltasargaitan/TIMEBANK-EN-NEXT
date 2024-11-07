@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
+
+.cuentasContainer {
+  color: white;
+  padding: 20px;
+  max-width: 500px;
+  text-align: center;
+  background: linear-gradient(1deg, brown, #fcafa7);
+
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative; 
+  margin: 40px auto; 
+  font-family: 'Montserrat', sans-serif; 
+}
+
+.saldo {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 10px 0;
+}

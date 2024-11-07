@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.inicioSesion {
+    max-width: 500px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: brown;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Montserrat", sans-serif; 
+}
+
+.inicioSesion p {
+    color: white;
+}
+
+.error {
+    color: rgb(252, 252, 252);
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif; 
+}
+
+.inicioSesion label {
+    display: block;
+    margin: 10px 0 5px;
+    color: white;
+}
+
+.inicioSesion input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif; 
+}
+
+.inicioSesion a {
+    color: rgb(252, 252, 252);
+}
+
+.inicioSesion h1 {
+    color: rgb(252, 252, 252);
+}
+
+.inicioSesion button {
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255); 
+    color: #000000; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-family: "Montserrat", sans-serif; 
+}
+
+.inicioSesion button:hover {
+    background-color: rgb(96, 50, 50); 
+}
+
+.inicioSesion button:active {
+    background-color: white; 
+}
+
+
+
+
+

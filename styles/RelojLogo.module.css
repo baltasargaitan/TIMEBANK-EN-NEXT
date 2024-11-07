@@ -1,0 +1,63 @@
+/* RelojLogo.css */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+.reloj-logo {
+  position: relative;
+  width: 100px; 
+  height: 100px; 
+  border: 5px solid #333; 
+  border-radius: 50%;
+  background-color: white;
+  margin: auto;
+}
+
+.hand {
+  position: absolute;
+  background: #333;
+  transform-origin: bottom;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hour {
+  height: 25px; 
+  width: 4px; 
+  background: #333;
+}
+
+.minute {
+  height: 35px;
+  width: 3px; 
+  background: #666;
+}
+
+.second {
+  height: 45px; 
+  width: 1px; 
+  background: red;
+}
+
+.center {
+  position: absolute;
+  width: 8px; 
+  height: 8px; 
+  background: #333;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock-text {
+  position: relative;
+  font-family: 'Cinzel', serif; 
+  font-size: 14px; 
+  font-weight: bold;
+  color: #333; 
+  text-align: center;
+  line-height: 100px; 
+  width: 100%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

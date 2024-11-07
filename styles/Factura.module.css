@@ -1,0 +1,46 @@
+/* styles/Factura.module.css */
+.factura {
+    margin-top: 20px;
+  }
+  
+  .facturaButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .facturaButton:hover {
+    background-color: #218838;
+  }
+  
+  .facturaButton:active {
+    background-color: #1e7e34;
+  }
+  
+  /* styles/ListadoFacturas.module.css */
+.listadoFacturas {
+    margin-top: 30px;
+  }
+  
+  .facturaItem {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .facturaItem p {
+    color: #333;
+  }
+  
+  .facturaItem strong {
+    font-weight: 700;
+  }
+  

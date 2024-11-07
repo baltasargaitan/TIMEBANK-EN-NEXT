@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+.header {
+    position: fixed;    /* Posición fija en la parte superior */
+    top: 0;             /* Siempre en la parte superior */
+    left: 0;  
+    right: 0;
+    bottom: 100;         /* Alineado a la izquierda */
+    width: 100%;
+    height: 10%;        /* Ocupa todo el ancho de la ventana */
+    background-color: brown;  /* Color de fondo del header */
+    color: white;       /* Color del texto */
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;   
+    display: flex;   
+    box-sizing: border-box;
+    transition: background-color 0.5s ease;/* Asegura que el header esté sobre otros elementos */
+}
+/* RelojLogo.css */
+.reloj-logo {
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 100px; 
+  height: 100px; 
+  border: 5px solid #333; 
+  border-radius: 50%;
+  background-color: white;
+  margin: auto;
+  border: 5px solid #333; 
+  border-radius: 50%;
+
+
+
+}
+
+.hand {
+  position: absolute;
+  background: #333;
+  transform-origin: bottom;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hour {
+  height: 25px; 
+  width: 4px; 
+  background: #333;
+}
+
+.minute {
+  height: 35px;
+  width: 3px; 
+  background: #666;
+}
+
+.second {
+  height: 45px; 
+  width: 1px; 
+  background: red;
+}
+
+.center {
+  position: absolute;
+  width: 8px; 
+  height: 8px; 
+  background: #333;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock-text {
+  position: relative;
+  font-family: 'Cinzel', serif; 
+  font-size: 14px; 
+  font-weight: bold;
+  color: #333; 
+  text-align: center;
+
+  width: 100%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header h1 {
+    font-size: 30px;
+    transition: background-color 0.3s ease;
+    font-family: "Montserrat", sans-serif; 
+    box-shadow: #000000;
+    text-shadow: black;
+    background-blend-mode: darken;
+    color: white;
+    position: absolute;  /* Posición fija en la parte superior */
+    top: 15%;            /* Siempre en la parte superior */
+    left: 1%;            /* Alineado a la izquierda */
+    animation: saltarLetras 0.8s ease 4 ; /* Animación aplicada */
+}
+
+@keyframes saltarLetras {
+    0% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateY(-10px); /* Salto hacia arriba */
+    }
+    100% {
+        transform: translateY(0); /* Vuelve a la posición original */
+    }
+}
+
+
+
+.button {
+    font-family: "Montserrat", sans-serif; 
+    box-shadow: #000000;
+    text-shadow: black;
+    background-blend-mode: darken;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    z-index: 10001;
+    transition: background-color 0.3s ease;
+    position: absolute; /* Cambiado de absolute a relative */
+    top: 50%;
+    right: 4%;
+    display: inline-block;
+}
+.button:hover {
+    border: 2px;
+
+    border-color: #000000;
+    background-color: rgb(179, 159, 159);
+    color: rgb(0, 0, 0);}
+    
+
+.button:active {
+    background-color: white; 
+}
+
+.button, .p, .h1 {
+    font-family: "Montserrat", sans-serif !important; 
+}
+
+
+@media (max-width: 600px) {
+    .header {
+        height: 80px;
+        font-size: 1.2em;
+        border-radius: 0 0 40% 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 90px;
+        font-size: 1.5em;
+        border-radius: 0 0 50% 50%;
+    }
+}

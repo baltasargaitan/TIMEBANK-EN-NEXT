@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.crearC {
+    display: flex;                
+    justify-content: center;      
+    align-items: center;           /* Centra el formulario verticalmente */
+    height: 100vh;                 /* La altura será el 100% de la ventana */
+    font-family: "Montserrat", sans-serif; 
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+.crearC form {
+
+    width: 100%;
+    max-width: 400px;              /* Máximo ancho del formulario */
+    padding: 20px;
+    background: linear-gradient(180deg, brown, #fcafa7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.crearC p {
+    color: rgb(255, 255, 255);
+}
+
+.error {
+    color: rgb(252, 252, 252);
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.crearC label {
+    border-radius: 5px;
+    display: block;
+    margin: 10px 0 5px;
+    color: rgb(255, 255, 255);
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+
+.crearC input {
+    
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+.crearC a {
+    align-items: center;
+    color: rgb(252, 252, 252);
+}
+
+.crearC h1 {
+    color: rgb(88, 28, 28);
+    margin-bottom: 20px;
+}
+
+.crearC button {
+    position:relative;
+    left: 33%;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+}
+.acepto label {
+    padding: 0;
+}
+.crearC button:hover {
+    color: white;
+    background-color: rgb(122, 104, 104);
+}
+
+.crearC button:active {
+    background-color: white;
+}
+
+.creada {
+    text-align: center;
+    color: white;
+    background: linear-gradient(180deg, brown, #fcafa7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto; /* Centra el mensaje */
+}
+
+.creada h1 {
+    margin-bottom: 20px;
+}
+
+.creada button {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-family: "Montserrat", sans-serif;
+}
+
+.creada button:hover {
+    background-color: rgb(96, 50, 50);
+}
+
+.creada button:active {
+    background-color: white;
+}

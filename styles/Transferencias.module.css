@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.transferencias {
+    color: white;
+    padding: 0;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(1deg, brown, #964941);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.transferencias h1 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.transferencias h2 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.formularioTransferencia {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    font-size: 16px;
+}
+
+.input:focus {
+    outline: none;
+    border: 2px solid #fff;
+    background-color: #fff;
+}
+
+.button {
+    margin-top: 10px;
+    color: rgb(141, 0, 0);
+    font-size: 18px;
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+.button:hover {
+    color: rgb(255, 255, 255);
+    background-color: brown;
+}
+
+.button:active {
+    background-color: rgb(252, 252, 252);
+}
+
+.transferencias p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* Estilo para el historial de movimientos */
+.historialMovimientos {
+    max-height: 150px;   /* Altura fija para el historial */
+    overflow-y: auto;    /* Barra de desplazamiento vertical */
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;    /* Espacio superior */
+}
+
+/* Estilo para cada movimiento dentro del historial */
+.historialMovimientos ul {
+    padding-left: 0;
+    list-style-type: none; /* Elimina los puntos de lista */
+}
+
+.historialMovimientos li {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.historialMovimientos h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Estilos para cada línea de movimiento */
+.historialMovimientos p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+.transferencia-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn-transferir {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-transferir:hover {
+    background-color: #0056b3;
+  }
+  
+  .mensaje {
+    position: fixed;
+    top: 50%;
+    right: -80%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    max-width: 300px;
+    text-align: center;
+  }
+
+.cuentas {
+    color: white;
+    padding: 0;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(180deg, brown, #fcafa7);
+
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif; }
+
+  .cuentas h1 {
+
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .saldo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .saldo p {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .mensaje.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .mensaje.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+
+/* Asegúrate de que no afecte otros elementos si se hace más largo */
+@media (max-width: 600px) {
+    .historialMovimientos {
+        max-height: 200px; /* Ajuste en pantallas pequeñas */
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .transferencias {
+        max-width: 700px;
+        padding: 30px;
+    }
+
+    .input {
+        padding: 12px;
+    }
+
+    .button {
+        font-size: 20px;
+        padding: 12px 24px;
+    }
+
+    .transferencias h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .transferencias {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .input {
+        padding: 8px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .transferencias h1 {
+        font-size: 20px;
+    }
+}
