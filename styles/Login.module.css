@@ -12,7 +12,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: "Montserrat", sans-serif; 
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box; 
 }
 
 .inicioSesion p {
@@ -22,7 +23,7 @@
 .error {
     color: rgb(252, 252, 252);
     margin-bottom: 15px;
-    font-family: "Montserrat", sans-serif; 
+    font-family: "Montserrat", sans-serif;
 }
 
 .inicioSesion label {
@@ -38,7 +39,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif; 
+    font-family: "Montserrat", sans-serif;
 }
 
 .inicioSesion a {
@@ -51,23 +52,51 @@
 
 .inicioSesion button {
     padding: 10px 20px;
-    background-color: rgb(255, 255, 255); 
-    color: #000000; 
+    background-color: rgb(255, 255, 255);
+    color: #000000;
     border: none;
     border-radius: 5px;
-    cursor: pointer; 
+    cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    font-family: "Montserrat", sans-serif; 
+    font-family: "Montserrat", sans-serif;
 }
 
 .inicioSesion button:hover {
-    background-color: rgb(96, 50, 50); 
+    background-color: rgb(96, 50, 50);
 }
 
 .inicioSesion button:active {
-    background-color: white; 
+    background-color: white;
 }
+
+
+@media (max-width: 768px) {
+    .inicioSesion {
+        padding: 15px; 
+        max-width: 90%; 
+    }
+    .inicioSesion h1 {
+        font-size: 24px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .inicioSesion {
+        padding: 10px; 
+        max-width: 100%; 
+    }
+    .inicioSesion h1 {
+        font-size: 20px; 
+    }
+    .inicioSesion input {
+        font-size: 14px; 
+    }
+    .inicioSesion button {
+        font-size: 14px; 
+    }
+}
+
 
 
 

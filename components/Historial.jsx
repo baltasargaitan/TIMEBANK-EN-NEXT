@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from 'react';
-import styles from '../[Cuentas]/cuentas.module.css';
+import styles from '../styles/cuentas.module.css';
 
 const Historial = () => {
   const [historial, setHistorial] = useState([]);

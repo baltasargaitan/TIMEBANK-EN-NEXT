@@ -1,46 +1,92 @@
-/* styles/Factura.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
+
 .factura {
+  margin-top: 20px;
+}
+
+.facturaButton {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.facturaButton:hover {
+  background-color: #218838;
+}
+
+.facturaButton:active {
+  background-color: #1e7e34;
+}
+
+.listadoFacturas {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;  
+  gap: 20px;  
+}
+
+.facturaItem {
+  background-color: #f4f4f4;
+  padding: 10px; 
+  margin: 8px 0; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat', sans-serif;
+  width: 250px; 
+  text-align: center; 
+}
+
+.facturaItem p {
+  color: #333;
+}
+
+.facturaItem strong {
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .facturaButton {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .listadoFacturas {
     margin-top: 20px;
   }
-  
-  .facturaButton {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-  }
-  
-  .facturaButton:hover {
-    background-color: #218838;
-  }
-  
-  .facturaButton:active {
-    background-color: #1e7e34;
-  }
-  
-  /* styles/ListadoFacturas.module.css */
-.listadoFacturas {
-    margin-top: 30px;
-  }
-  
+
   .facturaItem {
-    background-color: #f4f4f4;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 8px; 
+    width: 230px; 
   }
-  
+}
+
+@media (max-width: 480px) {
+  .facturaButton {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  .listadoFacturas {
+    margin-top: 15px;
+  }
+
+  .facturaItem {
+    padding: 6px; 
+    width: 200px; 
+  }
+
   .facturaItem p {
-    color: #333;
+    font-size: 0.9rem;
   }
-  
-  .facturaItem strong {
-    font-weight: 700;
-  }
+}
+
+
+
   

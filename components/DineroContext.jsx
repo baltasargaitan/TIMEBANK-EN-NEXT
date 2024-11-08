@@ -8,13 +8,13 @@ export const useDinero = () => {
 };
 
 export const DineroProvider = ({ children }) => {
-  // Cargar saldo desde localStorage si existe, sino asignar un valor por defecto
+  
   const [saldo, setSaldo] = useState(() => {
     if (typeof window !== "undefined") {
       const storedSaldo = localStorage.getItem('saldo');
-      return storedSaldo ? parseFloat(storedSaldo) : 10000; // 10000 es el saldo inicial
+      return storedSaldo ? parseFloat(storedSaldo).toFixed(2) : '10000.00'; 
     }
-    return 10000;
+    return '10000.00'; 
   });
 
   const [movimientos, setMovimientos] = useState(() => {
@@ -27,8 +27,8 @@ export const DineroProvider = ({ children }) => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      // Guardar saldo y movimientos en localStorage
-      localStorage.setItem('saldo', saldo.toString());
+      
+      localStorage.setItem('saldo', saldo);
       localStorage.setItem('movimientos', JSON.stringify(movimientos));
     }
   }, [saldo, movimientos]);
@@ -39,16 +39,16 @@ export const DineroProvider = ({ children }) => {
       alert('El monto debe ser positivo.');
       return;
     }
-    if (montoNumerico > saldo) {
+    if (montoNumerico > parseFloat(saldo)) { 
       alert('Saldo insuficiente.');
       return;
     }
 
-    // Actualizar saldo
-    const nuevoSaldo = saldo - montoNumerico;
+   
+    const nuevoSaldo = (parseFloat(saldo) - montoNumerico).toFixed(2); 
     setSaldo(nuevoSaldo);
 
-    // Registrar el movimiento
+    
     setMovimientos((prevMovimientos) => [
       ...prevMovimientos,
       { destinatario, monto, fecha: new Date().toLocaleString() }

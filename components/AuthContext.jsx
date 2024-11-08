@@ -9,12 +9,12 @@ export function AuthProvider({ children }) {
   const router = useRouter();
 
   useEffect(() => {
-    // Verificar si estamos en el cliente
+    
     if (typeof window !== 'undefined') {
       const authStatus = localStorage.getItem('isAuthenticated') === 'true';
       setIsAuthenticated(authStatus);
 
-      // Si el usuario está autenticado, establecer el nombre de usuario
+    
       if (authStatus) {
         const storedUsername = localStorage.getItem('usuario');
         if (storedUsername) {
@@ -22,34 +22,34 @@ export function AuthProvider({ children }) {
         }
       }
 
-      // Redirigir si no está autenticado y trata de acceder a una página privada
+     
       if (!authStatus && router.pathname !== '/login' && router.pathname !== '/signup') {
         router.push('/login');
       }
     }
   }, [router.pathname]);
 
-  // Función para iniciar sesión
+
   const login = (user) => {
     setIsAuthenticated(true);
-    setUsername(user); // Guardar el nombre de usuario en el estado del contexto
+    setUsername(user); 
     if (typeof window !== 'undefined') {
         localStorage.setItem('isAuthenticated', 'true');
-        localStorage.setItem('usuario', `Usuario: ${user}`); // Guardar el nombre de usuario en localStorage
+        localStorage.setItem('usuario', `Usuario: ${user}`); 
     }
-    router.push('/inicio');  // Redirigir a la página de inicio después de login
+    router.push('/inicio');  
 };
 
 
-  // Función para cerrar sesión
+  
   const logout = () => {
     setIsAuthenticated(false);
-    setUsername('Usuario'); // Resetear nombre de usuario al cerrar sesión
+    setUsername('Usuario'); 
     if (typeof window !== 'undefined') {
       localStorage.removeItem('isAuthenticated');
-      localStorage.removeItem('usuario'); // Eliminar el nombre de usuario de localStorage
+      localStorage.removeItem('usuario'); 
     }
-    router.push('/login');  // Redirigir al login al cerrar sesión
+    router.push('/login'); 
   };
 
   return (

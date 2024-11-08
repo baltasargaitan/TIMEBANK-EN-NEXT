@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 import styles from '../styles/Header.module.css';
 
 const RelojLogo = () => {
-  const [date, setDate] = useState(null);  // Estado inicialmente nulo para evitar el desajuste
-  const [isClient, setIsClient] = useState(false); // Para verificar si estamos en el cliente
+  const [date, setDate] = useState(null); 
+  const [isClient, setIsClient] = useState(false); 
 
   useEffect(() => {
-    setIsClient(true);  // Marcar como cliente después de que el componente se haya montado
+    setIsClient(true);  
     const timerID = setInterval(() => {
       setDate(new Date());
     }, 1000);
@@ -16,7 +16,7 @@ const RelojLogo = () => {
   }, []);
 
   if (!isClient || !date) {
-    return null; // Retorna null durante el SSR o hasta que se haya inicializado `date`
+    return null; 
   }
 
   const seconds = date.getSeconds() * 6;

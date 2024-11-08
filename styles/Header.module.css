@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 
 .header {
-    position: fixed;    /* Posición fija en la parte superior */
-    top: 0;             /* Siempre en la parte superior */
+    position: fixed;    
+    top: 0;             
     left: 0;  
     right: 0;
-    bottom: 100;         /* Alineado a la izquierda */
+    bottom: 100;        
     width: 100%;
-    height: 10%;        /* Ocupa todo el ancho de la ventana */
-    background-color: brown;  /* Color de fondo del header */
-    color: white;       /* Color del texto */
+    height: 10%;      
+    background-color: brown;  
+    color: white;       
     text-align: center;
     padding: 20px;
     z-index: 1000;   
     display: flex;   
     box-sizing: border-box;
-    transition: background-color 0.5s ease;/* Asegura que el header esté sobre otros elementos */
+    transition: background-color 0.5s ease;
 }
-/* RelojLogo.css */
+
 .reloj-logo {
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -30,9 +30,6 @@
   margin: auto;
   border: 5px solid #333; 
   border-radius: 50%;
-
-
-
 }
 
 .hand {
@@ -95,21 +92,21 @@
     text-shadow: black;
     background-blend-mode: darken;
     color: white;
-    position: absolute;  /* Posición fija en la parte superior */
-    top: 15%;            /* Siempre en la parte superior */
-    left: 1%;            /* Alineado a la izquierda */
-    animation: saltarLetras 0.8s ease 4 ; /* Animación aplicada */
+    position: absolute;  
+    top: 15%;            
+    left: 10%;            
+    animation: saltarLetras 0.8s ease 4 ;
 }
 
 @keyframes saltarLetras {
     0% {
-        transform: translateY(0); /* Posición inicial */
+        transform: translateY(0); 
     }
     50% {
-        transform: translateY(-10px); /* Salto hacia arriba */
+        transform: translateY(-10px);
     }
     100% {
-        transform: translateY(0); /* Vuelve a la posición original */
+        transform: translateY(0); 
     }
 }
 
@@ -129,7 +126,7 @@
     font-family: "Montserrat", sans-serif;
     z-index: 10001;
     transition: background-color 0.3s ease;
-    position: absolute; /* Cambiado de absolute a relative */
+    position: absolute; 
     top: 50%;
     right: 4%;
     display: inline-block;

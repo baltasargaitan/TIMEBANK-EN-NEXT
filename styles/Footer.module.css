@@ -1,27 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .footer {
-  position: fixed;    /* Posición fija en la parte inferior */
-  bottom: 0;          /* Siempre en la parte inferior */
-  left: 0;            /* Alineado a la izquierda */
+  position: fixed;     
+  bottom: 0;            
+  left: 0;              
   width: 100%;
+  padding: 10px 0;     
 
-  background-color: #333;  /* El color de fondo para el footer */
-  color: white;       /* Color del texto */
+  background-color: #333;  
+  color: white;          
   text-align: center;
 
+  font-family: 'Montserrat', sans-serif;
 }
 
 .footerContent {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 100%;
 }
 
 .socialIcons {
   margin-top: 10px;
+  display: flex;
+  justify-content: center; 
 }
 
 .socialIcons a {
@@ -29,8 +33,33 @@
   font-size: 24px;
   margin: 0 10px;
   text-decoration: none;
+  transition: color 0.3s ease; 
 }
 
 .socialIcons a:hover {
   color: #ddd;
 }
+
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 15px 0; 
+  }
+
+  .socialIcons a {
+    font-size: 20px; 
+    margin: 0 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 20px 0; 
+  }
+
+  .socialIcons a {
+    font-size: 18px; 
+    margin: 0 5px;
+  }
+}
+

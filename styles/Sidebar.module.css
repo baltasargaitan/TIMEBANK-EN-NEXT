@@ -2,46 +2,118 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .sidebar {
-    position: absolute;
-    bottom:0;
+    position: fixed;
+    bottom: 0;
     left: 0;
-    width: 10%;  /* Ancho del sidebar */
-    height: 100%; /* Altura completa */
+    width: 5%;  /* Hacemos el sidebar aún más pequeño cuando no se usa */
+    height: 100%; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     background: linear-gradient(180deg, brown, #fcafa7);
-    color: white;  /* Color del texto */
-    padding-top: 20px; /* Espaciado superior */
-    padding-left: 20px; /* Espaciado izquierdo */
-    overflow-x: auto;
-    overflow-y: auto;
-    
+    color: white; 
+    padding-top: 20px; 
+    padding-left: 5px;  /* Menos padding para ajustarse al nuevo tamaño */
+    font-family: 'Montserrat', sans-serif;
+    transition: width 0.3s ease; /* Transición para el cambio de tamaño */
+    overflow: hidden; /* Ocultar contenido cuando la barra esté contraída */
 }
+
+/* Barra lateral expandida al hacer hover */
+.sidebar.expanded {
+    width: 15%;  /* Tamaño expandido */
+}
+
+/* Barra lateral contraída (cuando no se hace hover) */
+.sidebar.collapsed {
+    width: 5%; /* Ahora el sidebar es más pequeño */
+}
+
+/* Estilo del icono de menú (tres barras) cuando el sidebar está contraído */
+.sidebar::before {
+    content: "☰"; /* Tres barras de menú */
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    cursor: pointer;
+}
+
+/* Estilo de la lista */
 .sidebar ul {
     justify-items: left;
-    position: fixed;
-    top:30%;
+    position: absolute;
+    top: 30%;
     overflow: hidden;
     list-style-type: none;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
 
-
+/* Estilo de los elementos de la lista */
 .sidebar li {
-    overflow: hidden;
     margin: 20px 0;
+    opacity: 0; /* Ocultar los elementos de la lista por defecto */
+    visibility: hidden; /* Asegurarse de que no ocupen espacio cuando estén ocultos */
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transición suave */
 }
 
+/* Cuando la barra está expandida, los elementos se hacen visibles */
+.sidebar.expanded li {
+    opacity: 1; /* Hacer visibles los elementos */
+    visibility: visible; /* Asegurarse de que se muestren */
+}
+
+/* Estilo de los enlaces */
 .sidebar a {
-    color: white; /* Color de texto de los enlaces */
-    text-decoration: none; /* Eliminar subrayado */
+    color: white;
+    text-decoration: none;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
+    transition: font-size 0.3s ease, font-weight 0.3s ease;
 }
 
+/* Hover en los enlaces */
 .sidebar a:hover {
-
     font-size: larger;
     font-weight: bolder;
 }
+
+/* Media Queries */
+
+@media (min-width: 1024px) {
+    .sidebar {
+        width: 15%; 
+    }
+
+    .sidebar a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 600px) {
+    .sidebar {
+        width: 20%; 
+    }
+
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        width: 100%; 
+        padding-top: 10px; 
+        padding-left: 10px; 
+    }
+
+    .sidebar ul {
+        top: 10%; 
+    }
+
+    .sidebar a {
+        font-size: 16px; 
+    }
+}
+
+

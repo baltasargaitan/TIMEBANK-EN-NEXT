@@ -21,6 +21,7 @@
     font-size: 24px;
     margin-bottom: 20px;
 }
+
 .transferencias h2 {
     color: white;
     font-size: 22px;
@@ -79,21 +80,22 @@
     font-size: 18px;
     font-weight: bold;
 }
-/* Estilo para el historial de movimientos */
+
+
 .historialMovimientos {
-    max-height: 150px;   /* Altura fija para el historial */
-    overflow-y: auto;    /* Barra de desplazamiento vertical */
-    background-color: #f9f9f9; /* Fondo claro */
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;    /* Espacio superior */
+    margin-top: 20px;
 }
 
-/* Estilo para cada movimiento dentro del historial */
+
 .historialMovimientos ul {
     padding-left: 0;
-    list-style-type: none; /* Elimina los puntos de lista */
+    list-style-type: none;
 }
 
 .historialMovimientos li {
@@ -111,12 +113,13 @@
     color: #333;
 }
 
-/* Estilos para cada línea de movimiento */
+
 .historialMovimientos p {
     margin: 5px 0;
     font-size: 14px;
     color: #555;
 }
+
 .transferencia-container {
     position: relative;
     width: 100%;
@@ -125,26 +128,26 @@
     padding: 20px;
     background-color: #f4f4f9;
     border-radius: 10px;
-  }
-  
-  .input-group {
+}
+
+.input-group {
     margin-bottom: 20px;
-  }
-  
-  .input-group label {
+}
+
+.input-group label {
     display: block;
     margin-bottom: 5px;
-  }
-  
-  .input-group input {
+}
+
+.input-group input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  .btn-transferir {
+}
+
+.btn-transferir {
     width: 100%;
     padding: 12px;
     font-size: 16px;
@@ -153,13 +156,13 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .btn-transferir:hover {
+}
+
+.btn-transferir:hover {
     background-color: #0056b3;
-  }
-  
-  .mensaje {
+}
+
+.mensaje {
     position: fixed;
     top: 50%;
     right: -80%;
@@ -168,7 +171,7 @@
     font-size: 14px;
     max-width: 300px;
     text-align: center;
-  }
+}
 
 .cuentas {
     color: white;
@@ -177,54 +180,68 @@
     text-align: center;
     padding: 20px;
     background: linear-gradient(180deg, brown, #fcafa7);
-
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Montserrat', sans-serif; }
+    font-family: 'Montserrat', sans-serif;
+}
 
-  .cuentas h1 {
-
+.cuentas h1 {
     font-size: 1.2rem;
     color: #ffffff;
     font-weight: bold;
-  }
-  
-  .saldo {
+}
+
+.saldo {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     margin-top: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .saldo p {
+}
+
+.saldo p {
     font-size: 1.2rem;
     color: #333;
     font-weight: bold;
-  }
-  
-  .mensaje.error {
-    background-color: #f8d7da;
-    color: #721c24;
-  }
-  
-  .mensaje.success {
-    background-color: #d4edda;
-    color: #155724;
-  }
-  
-
-/* Asegúrate de que no afecte otros elementos si se hace más largo */
-@media (max-width: 600px) {
-    .historialMovimientos {
-        max-height: 200px; /* Ajuste en pantallas pequeñas */
-    }
 }
 
+.mensaje.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.mensaje.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+@media (max-width: 600px) {
+    .historialMovimientos {
+        max-height: 200px; 
+    }
+
+    .transferencias {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .input {
+        padding: 8px;
+    }
+
+    .button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .transferencias h1 {
+        font-size: 20px;
+    }
+}
 
 @media (min-width: 1024px) {
     .transferencias {
@@ -246,22 +263,3 @@
     }
 }
 
-@media (max-width: 600px) {
-    .transferencias {
-        max-width: 90%;
-        padding: 15px;
-    }
-
-    .input {
-        padding: 8px;
-    }
-
-    .button {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
-
-    .transferencias h1 {
-        font-size: 20px;
-    }
-}
