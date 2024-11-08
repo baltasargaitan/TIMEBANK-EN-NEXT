@@ -16,6 +16,8 @@ export async function getStaticProps() {
 const Facturas = ({ facturas }) => {
   const { saldo, handleTransferirDinero } = useDinero(); 
   const [facturasList, setFacturasList] = useState(facturas);
+  const [mensajes, setMensajes] = useState({});  // Mantener los mensajes por factura
+  const [mensajeVisible, setMensajeVisible] = useState({});  // Mantener la visibilidad por factura
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -26,20 +28,46 @@ const Facturas = ({ facturas }) => {
   }, [facturasList]);
 
   const handlePayment = (facturaId, monto) => {
- 
     if (parseFloat(monto) > saldo) {
-      alert('No tienes suficiente saldo para pagar esta factura.');
+      setMensajes((prev) => ({
+        ...prev,
+        [facturaId]: "No tienes suficiente saldo para pagar esta factura."
+      }));
+      setMensajeVisible((prev) => ({
+        ...prev,
+        [facturaId]: true
+      }));
+
+      setTimeout(() => {
+        setMensajeVisible((prev) => ({
+          ...prev,
+          [facturaId]: false
+        }));
+      }, 3000); // Desaparece después de 3 segundos
+
       return;
     }
 
-   
     handleTransferirDinero(monto, `Pago factura ${facturaId}`);
 
-  
     const nuevasFacturas = facturasList.filter(factura => factura.id !== facturaId);
     setFacturasList(nuevasFacturas);
 
-    alert(`Pago exitoso para la factura ${facturaId}`);
+    setMensajes((prev) => ({
+      ...prev,
+      [facturaId]: `Pago exitoso para la factura ${facturaId}`
+    }));
+    setMensajeVisible((prev) => ({
+      ...prev,
+      [facturaId]: true
+    }));
+
+    setTimeout(() => {
+      setMensajeVisible((prev) => ({
+        ...prev,
+        [facturaId]: false
+      }));
+    }, 3000); // Desaparece después de 3 segundos
   };
 
   if (!facturasList || facturasList.length === 0) {
@@ -59,6 +87,13 @@ const Facturas = ({ facturas }) => {
           >
             Pagar
           </button>
+
+          {/* Mostrar el mensaje de pago dentro del contenedor de la factura */}
+          {mensajeVisible[factura.id] && (
+            <div className={`${Styles.mensajePago} ${mensajeVisible[factura.id] ? '' : Styles.fadeOut}`}>
+              {mensajes[factura.id]}
+            </div>
+          )}
         </div>
       ))}
     </div>

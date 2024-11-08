@@ -1,14 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap');
+/* Estilo para el mensaje de pago dentro del contenedor de la factura */
+.mensajePago {
+  position: absolute; /* Posicionamos el mensaje dentro del contenedor */
+  top: 10px; /* Lo colocamos al principio del contenedor */
+  right: 10px; /* Lo alineamos a la derecha */
+  background-color: brown;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 1;
+  z-index: 9999;
+  transition: opacity 1s ease-out; /* Animación de desaparición */
+}
 
-/* Estilo para las facturas */
-.factura {
-  margin-top: 20px;
+.fadeOut {
+  opacity: 0; /* Aplica la animación de desaparición */
+}
+
+.facturaItem {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin: 8px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  position: relative; /* Para que el mensaje se posicione dentro de este contenedor */
+}
+
+.facturaItem:hover {
+  transform: translateY(-5px);
 }
 
 .facturaButton {
   padding: 10px 20px;
   font-size: 1rem;
-  background-color: brown;  /* Color verde para el botón */
+  background-color: brown;  
   color: white;
   border: none;
   border-radius: 5px;
@@ -25,39 +56,13 @@
   background-color: #1e7e34;
 }
 
-/* Listado de facturas */
 .listadoFacturas {
-  margin-top: 5%;  margin-bottom: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   display: flex;
-  flex-direction: column; /* Las facturas estarán una debajo de otra */
-  align-items: center; /* Centrar las tarjetas */
-  gap: 20px; /* Espacio entre cada factura */
-}
-
-/* Estilo para cada factura */
-.facturaItem {
-  background-color: #f9f9f9; /* Color de fondo más suave para las facturas */
-  padding: 15px; /* Un poco más de espacio interno */
-  margin: 8px 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Montserrat', sans-serif;
-  width: 100%; /* Que ocupe todo el ancho disponible */
-  max-width: 400px; /* Limitar el tamaño máximo */
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.facturaItem:hover {
-  transform: translateY(-5px); /* Efecto hover para hacer que la tarjeta suba ligeramente */
-}
-
-.facturaItem p {
-  color: #333;
-}
-
-.facturaItem strong {
-  font-weight: 700;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .facturaTitle {
@@ -75,12 +80,12 @@
 
   .listadoFacturas {
     margin-top: 20px;
-    padding: 0 10px; /* Ajustar el padding en pantallas más pequeñas */
+    padding: 0 10px;
   }
 
   .facturaItem {
     padding: 10px;
-    width: 100%; /* Hacer las tarjetas más grandes en pantallas pequeñas */
+    width: 100%;
     max-width: 100%;
   }
 }
@@ -97,7 +102,7 @@
 
   .facturaItem {
     padding: 8px;
-    width: 100%; 
+    width: 100%;
     max-width: 100%;
   }
 
