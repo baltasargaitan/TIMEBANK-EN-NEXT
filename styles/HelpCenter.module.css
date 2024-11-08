@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Estilo principal para la sección de ayuda */
 .helpCenter {
     max-width: 1400px;
     width: 100%;
@@ -8,20 +10,23 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Montserrat', sans-serif;
     padding: 20px;
-    margin-top: 6%;    margin-bottom: 5%;
-    padding-top: 60px;  /* Aumentamos el espacio superior para bajar el contenido */
+    margin-top: 6%;    
+    margin-bottom: 5%;
+    padding-top: 60px;  /* Aumenta el espacio superior para bajar el contenido */
     display: flex;
     flex-direction: column;
     gap: 20px; /* Espacio entre los componentes */
 }
 
+/* Estilo para el título de la sección de ayuda */
 .title {
     text-align: center;
-    color: black;
+    color: rgb(255, 255, 255);
     margin-bottom: 20px;
     font-size: 32px;
 }
 
+/* Estilo para el campo de búsqueda */
 .searchSection input {
     width: 100%;
     padding: 10px;
@@ -32,24 +37,27 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Estilo para las secciones de FAQ y contacto */
 .faqSection, .contactSection {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
+/* Estilo para los títulos dentro de las secciones de FAQ y contacto */
 .faqSection .faqTitle, .contactSection .contactTitle {
     font-size: 22px;
     color: rgb(255, 255, 255);
     font-family: 'Montserrat', sans-serif;
 }
 
+/* Estilo para la lista de preguntas frecuentes */
 .faqSection ul {
-    
     list-style-type: none;
     padding-left: 0;
 }
 
+/* Estilo para cada ítem de la lista en FAQ */
 .faqSection li {
     margin-bottom: 15px;
     padding: 15px;
@@ -58,26 +66,27 @@
     border: 1px solid #ddd;
 }
 
+/* Estilo para el texto en negrita dentro de los ítems de FAQ */
 .faqSection li strong {
     display: block;
     font-size: 18px;
     margin-bottom: 5px;
 }
 
+/* Estilo para los formularios en la sección de contacto */
 .contactSection form div {
     margin-bottom: 15px;
 }
 
+/* Estilo para las etiquetas del formulario en la sección de contacto */
 .contactSection label {
     color: rgb(255, 255, 255);
-
     display: block;
-    
     margin-bottom: 5px;
     font-weight: bold;
-
 }
 
+/* Estilo para los campos de texto (input y textarea) en la sección de contacto */
 .contactSection input,
 .contactSection textarea {
     width: 100%;
@@ -88,44 +97,50 @@
     box-sizing: border-box;
 }
 
+/* Estilo para el botón de la sección de contacto */
 .contactSection button {
     font-family: 'Montserrat', sans-serif;
-
     align-self: center;
     padding: 10px 20px;
     font-size: 16px;
     background-color: rgb(255, 255, 255);
-    color: brown(59, 29, 29);
+    color: brown;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-left: 50%;
 }
 
+/* Estilo para el botón al pasar el mouse sobre él */
 .contactSection button:hover {
     background-color: rgb(216, 123, 123);
 }
 
+/* Estilo para los mensajes de error */
 .errorMessage {
     color: red;
     font-size: 14px;
     margin-top: 10px;
 }
 
-/* Media Queries */
+/* Media Queries para pantallas más pequeñas */
 @media (max-width: 768px) {
+    /* Ajuste del tamaño del título en pantallas pequeñas */
     .title {
-        font-size: 24px; /* Tamaño más pequeño para el título en pantallas pequeñas */
+        font-size: 24px; 
     }
 
+    /* Ajuste del tamaño de la fuente en el campo de búsqueda en dispositivos móviles */
     .searchSection input {
-        font-size: 14px; /* Reducir el tamaño de la fuente en dispositivos móviles */
+        font-size: 14px; 
     }
 
+    /* Reducción del espacio entre los elementos en FAQ y Contacto */
     .faqSection, .contactSection {
         gap: 10px;
     }
 
+    /* Ajuste del padding en los ítems de FAQ */
     .faqSection li {
         padding: 10px;
     }

@@ -1,6 +1,7 @@
 /* src/components/convert.module.css */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
 
+/* Estilo general para el body */
 .body {
   font-family: 'Cinzel', serif;
   background-color: #F4F4F9;
@@ -10,29 +11,29 @@
   text-align: center;
 }
 
+/* Contenedor principal con disposición flexible */
 .container {
-
   display: flex;
   flex-direction: column;
-  
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Ocupa el alto completo de la vista */
+  height: 100vh;
   position: absolute;
   right: 39%;
   top: 0;
 }
 
+/* Estilo para el título principal */
 .h1 {
   font-family: "Montserrat", sans-serif;
-  text-shadow:0 4px 8px rgb(207, 140, 140);
-
+  text-shadow: 0 4px 8px rgb(207, 140, 140);
   text-align: center;
   margin-bottom: 20px;
   font-size: 24px;
   color: rgb(255, 255, 255);
 }
 
+/* Estilo para el convertidor de divisas */
 .currencyConverter {
   background: linear-gradient(180deg, brown, #fcafa7);
   font-family: "Montserrat", sans-serif;
@@ -44,12 +45,12 @@
   color: white;
 }
 
+/* Estilo para los grupos de entradas (select e input) */
 .inputGroup {
-
-
   margin-bottom: 20px;
 }
 
+/* Estilo para los select y campos numéricos */
 .select, .inputNumber {
   padding: 10px;
   font-size: 16px;
@@ -60,17 +61,17 @@
   box-sizing: border-box;
 }
 
+/* Estilo para el select */
 .select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance:none;
-  
+  appearance: none;
   background-color: #F9F9F9;
 }
 
+/* Estilo para el botón */
 .button {
   font-family: "Montserrat", sans-serif;
-
   background-color: rgb(255, 255, 255);
   color: brown;
   font-size: 16px;
@@ -83,15 +84,18 @@
   width: 100%;
 }
 
-
+/* Estilo del botón al pasar el mouse */
 .button:hover {
   color: rgb(255, 255, 255);
   background-color: brown;
 }
 
+/* Estilo del botón al hacer clic */
 .button:active {
   background-color: rgb(252, 252, 252);
 }
+
+/* Estilo para el resultado de la conversión */
 .result {
   position: relative;
   left: 30%;
@@ -99,6 +103,7 @@
   font-size: 18px;
 }
 
+/* Estilo para el texto del resultado */
 .resultP {
   font-weight: bold;
   color: #ffffff;

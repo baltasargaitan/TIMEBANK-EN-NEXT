@@ -1,5 +1,4 @@
 'use client'
-import '../styles/globals.css';
 import { AuthProvider } from '../components/AuthContext';
 import { DineroProvider } from '../components/DineroContext';
 import Layout from '../components/layout';
