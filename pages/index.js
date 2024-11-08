@@ -1,4 +1,13 @@
+import Head from 'next/head';
+
 export default function Home() {
-    return <h1>¡Bienvenido a mi aplicación Next.js!</h1>;
-  }
-  
+  return (
+    <>
+      <Head>
+        <title>TimeBank</title>
+        <meta name="description" content="Descripción de la página" />
+        {/* Puedes agregar más elementos aquí */}
+      </Head>
+    </>
+  );
+}

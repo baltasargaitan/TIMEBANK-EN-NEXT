@@ -3,7 +3,7 @@
     max-width: 1400px;
     width: 100%;
     margin: 20px auto;
-    background-color: rgba(165, 42, 42, 0.349);
+    background: linear-gradient(2deg, brown, #fcafa7);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Montserrat', sans-serif;
@@ -40,11 +40,12 @@
 
 .faqSection .faqTitle, .contactSection .contactTitle {
     font-size: 22px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-family: 'Montserrat', sans-serif;
 }
 
 .faqSection ul {
+    
     list-style-type: none;
     padding-left: 0;
 }
@@ -68,10 +69,13 @@
 }
 
 .contactSection label {
+    color: rgb(255, 255, 255);
+
     display: block;
+    
     margin-bottom: 5px;
     font-weight: bold;
-    color: #555;
+
 }
 
 .contactSection input,
@@ -85,17 +89,21 @@
 }
 
 .contactSection button {
+    font-family: 'Montserrat', sans-serif;
+
+    align-self: center;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: brown;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: brown(59, 29, 29);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 50%;
 }
 
 .contactSection button:hover {
-    background-color: rgb(97, 56, 56);
+    background-color: rgb(216, 123, 123);
 }
 
 .errorMessage {
