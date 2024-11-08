@@ -34,9 +34,9 @@ function Signup() {
     return (
         <div className={styles.crearC}>
             {cuentaCreada ? (
-                <div className={styles.mensajeExito}>
-                    <h1>¡Cuenta creada exitosamente!</h1>
-                    <button onClick={manejoVolverHome}>Volver a la página de inicio</button>
+                <div className={styles.creada}>
+                    <h1 className={styles.mensajeExito}>¡Cuenta creada exitosamente!</h1>
+                    <button className={styles.volver} onClick={manejoVolverHome}>Volver a la página de inicio</button>
                 </div>
             ) : (
                 <div className={styles.crearC}>

@@ -166,3 +166,62 @@
         border-radius: 0 0 50% 50%;
     }
 }
+@media (max-width: 1024px) {
+  .header {
+      height: 70px; /* Ajuste de altura para tablets */
+      font-size: 1.4em;
+      border-radius: 0 0 40% 40%;
+  }
+  .reloj-logo {
+      width: 80px;
+      height: 80px;
+  }
+  .clock-text {
+      font-size: 12px;
+  }
+  .header h1 {
+    font-size: 20px;
+    text-align: center; /* Centra el título en pantallas más pequeñas */
+    padding-left: 0; /* Elimina el padding izquierdo */
+}
+  .button {
+      top: 40%;
+      right: 4%;
+  }
+}
+
+@media (max-width: 768px) {
+  .reloj-logo {
+      width: 90px;
+      height: 90px;
+  }
+  .header h1 {
+      font-size: 18px;
+  }
+  .button {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+      height: 60px;
+      font-size: 1.2em;
+  }
+  .reloj-logo {
+      width: 70px;
+      height: 70px;
+  }
+  .header h1 {
+    font-size: 16px;
+    text-align: center;
+}
+  .clock-text {
+      font-size: 10px;
+  }
+  .button {
+      font-size: 12px;
+      padding: 6px 12px;
+  }
+}

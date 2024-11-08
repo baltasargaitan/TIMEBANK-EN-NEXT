@@ -49,3 +49,27 @@
 .button, .p, .h1 {
     font-family: "Montserrat", sans-serif !important; 
 }
+
+/* Estilos específicos para la imagen */
+.imageContainer {
+    margin-top: 20px; /* Un poco de espacio entre el texto y la imagen */
+}
+
+.image {
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    max-width: 600px; /* Limita el ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados para darle un toque más moderno */
+}
+
+/* Ajustes responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .landpageContainer {
+        max-width: 90%; /* Deja más espacio en pantallas pequeñas */
+        padding: 10px;
+    }
+
+    .image {
+        max-width: 100%; /* Asegura que la imagen no exceda el ancho de su contenedor */
+    }
+}
