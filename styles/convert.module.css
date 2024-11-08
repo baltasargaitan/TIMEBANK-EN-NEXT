@@ -4,15 +4,17 @@
 .body {
   font-family: 'Cinzel', serif;
   background-color: #F4F4F9;
-  color: #333;
+  background: linear-gradient(180deg, brown, #fcafa7);
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
 .container {
+
   display: flex;
   flex-direction: column;
+  
   align-items: center;
   justify-content: center;
   height: 100vh; /* Ocupa el alto completo de la vista */
@@ -22,13 +24,18 @@
 }
 
 .h1 {
+  font-family: "Montserrat", sans-serif;
+  text-shadow:0 4px 8px rgb(207, 140, 140);
+
+  text-align: center;
   margin-bottom: 20px;
   font-size: 24px;
-  color: brown;
+  color: rgb(255, 255, 255);
 }
 
 .currencyConverter {
-  background-color: brown;
+  background: linear-gradient(180deg, brown, #fcafa7);
+  font-family: "Montserrat", sans-serif;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -38,6 +45,8 @@
 }
 
 .inputGroup {
+
+
   margin-bottom: 20px;
 }
 
@@ -54,11 +63,14 @@
 .select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  appearance:none;
+  
   background-color: #F9F9F9;
 }
 
 .button {
+  font-family: "Montserrat", sans-serif;
+
   background-color: rgb(255, 255, 255);
   color: brown;
   font-size: 16px;

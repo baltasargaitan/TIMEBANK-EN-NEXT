@@ -17,13 +17,13 @@ const Card = ({ tier, name, number, onCardClick }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div className={styles.cardContent}>
-        <h2 className={styles.cardTitle}>{name}</h2>
+        <h2 className={styles.cardTitle}>Nombre del titular: {name}</h2>
         <p className={styles.cardNumber}>{number}</p>
         <p className={styles.cardTier}>{tier.toUpperCase()}</p>
       </div>
       <div className={styles.cardBack}>
         <div className={styles.cvv}>
-          <p>CVV:153</p>
+          <p>CVV: 153</p>
         </div>
         <div className={styles.lineaNegra}></div>
       </div>

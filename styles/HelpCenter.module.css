@@ -1,55 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
 .helpCenter {
-    display: flexbox;
     max-width: 1400px;
-    max-height: 00px;
-    height: fit-content;
-    margin: 20px auto; 
-    padding: 20px;
+    width: 100%;
+    margin: 20px auto;
     background-color: rgba(165, 42, 42, 0.349);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative; 
     font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    margin-top: 6%;    margin-bottom: 5%;
+    padding-top: 60px;  /* Aumentamos el espacio superior para bajar el contenido */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los componentes */
 }
 
 .title {
-    position: relative;
-    top: 100px;
     text-align: center;
     color: black;
     margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
 }
 
 .searchSection input {
-    position: relative;
-    top: 130px;
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    margin-bottom: 20px;
     border: 1px solid black;
     border-radius: 5px;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
 
-.faqSection {
-    display: flexbox;
-    position: absolute;
-    top: 350px;
-    left: 10px;
-    max-width: fit-content;
-    margin-bottom: 40px;
+.faqSection, .contactSection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.faqSection .faqTitle {
-    
+.faqSection .faqTitle, .contactSection .contactTitle {
     font-size: 22px;
     color: black;
-    margin-bottom: 15px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -64,34 +55,12 @@
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid #ddd;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .faqSection li strong {
     display: block;
     font-size: 18px;
     margin-bottom: 5px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.contactSection {
-    display:flexbox;
-    position: absolute;
-    top: 380px;
-    right: 0;
-    max-width: fit-content;
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.contactSection .contactTitle {
-    font-size: 22px;
-    color: #333;
-    margin-bottom: 15px;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .contactSection form div {
@@ -103,7 +72,6 @@
     margin-bottom: 5px;
     font-weight: bold;
     color: #555;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .contactSection input,
@@ -114,7 +82,6 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .contactSection button {
@@ -125,7 +92,6 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .contactSection button:hover {
@@ -136,7 +102,23 @@
     color: red;
     font-size: 14px;
     margin-top: 10px;
-    font-family: 'Montserrat', sans-serif;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .title {
+        font-size: 24px; /* Tamaño más pequeño para el título en pantallas pequeñas */
+    }
 
+    .searchSection input {
+        font-size: 14px; /* Reducir el tamaño de la fuente en dispositivos móviles */
+    }
+
+    .faqSection, .contactSection {
+        gap: 10px;
+    }
+
+    .faqSection li {
+        padding: 10px;
+    }
+}

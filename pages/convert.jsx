@@ -37,11 +37,11 @@ function Convert() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.h1}>Conversor de Monedas</h1>
       {error ? (
         <p>{error}</p>
       ) : (
         <div className={styles.currencyConverter}>
+                <h1 className={styles.h1}>Conversor de Monedas</h1>
           <div className={styles.inputGroup}>
             <label htmlFor="fromCurrency">De:</label>
             <select

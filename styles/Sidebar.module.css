@@ -1,47 +1,73 @@
-/* Sidebar.module.css */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
 .sidebar {
-    position: absolute;
-    bottom:0;
+    position: fixed;  /* Usamos 'fixed' para que se mantenga en su lugar incluso cuando el contenido crezca */
+    top: 0;
     left: 0;
-    width: 10%;  /* Ancho del sidebar */
-    height: 100%; /* Altura completa */
+    width: 200px; /* Ajusta el ancho del sidebar */
+    height: 100vh;  /* Hace que el sidebar ocupe el 100% del alto de la ventana */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     background: linear-gradient(180deg, brown, #fcafa7);
-    color: white;  /* Color del texto */
-    padding-top: 20px; /* Espaciado superior */
-    padding-left: 20px; /* Espaciado izquierdo */
-    overflow-x: auto;
-    overflow-y: auto;
-    
+    color: white;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 20px;
+    overflow-y: auto;  /* Permite el desplazamiento en el sidebar si el contenido excede la altura */
+    transition: transform 0.3s ease; /* Transición para abrir y cerrar */
+    transform: translateX(-100%); /* Oculto inicialmente */
 }
+
+.sidebar.open {
+    transform: translateX(0); /* Visible cuando está abierto */
+}
+
 .sidebar ul {
-    justify-items: left;
-    position: fixed;
-    top:30%;
-    overflow: hidden;
+    margin-top: 50%;
     list-style-type: none;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
 
-
 .sidebar li {
-    overflow: hidden;
     margin: 20px 0;
 }
 
 .sidebar a {
-    color: white; /* Color de texto de los enlaces */
-    text-decoration: none; /* Eliminar subrayado */
+    color: white;
+    text-decoration: none;
     font-size: 18px;
     font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
 }
 
 .sidebar a:hover {
-
     font-size: larger;
     font-weight: bolder;
+}
+
+/* Estilos para el botón flotante */
+.floatingButton {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.floatingButton:hover {
+    background-color: #fcafa7;
+}
+
+/* Media query para mostrar el sidebar siempre en pantallas grandes */
+@media (min-width: 768px) {
+    .sidebar {
+        transform: translateX(0); /* Siempre visible en pantallas grandes */
+    }
+    .floatingButton {
+        display: none; /* Ocultar el botón en pantallas grandes */
+    }
 }

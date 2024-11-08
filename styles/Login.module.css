@@ -16,6 +16,7 @@
 }
 
 .inicioSesion p {
+
     color: white;
 }
 
@@ -46,6 +47,7 @@
 }
 
 .inicioSesion h1 {
+    text-shadow:0 4px 8px brown;
     color: rgb(252, 252, 252);
 }
 
